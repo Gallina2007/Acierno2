@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <p> per ora funziona tutto</p>
+    <h1>La tua Lista della Spesa</h1>
+    {% if lista %}
+    <ul>
+        {% for elemento in lista %}
+            <li>{{ elemento }}</li>
+        {% endfor %}
+    </ul>
+   {% else %}
+   <p> La lista è vuota.</p>
+   {% endif %} 
 </body>
 </html>
